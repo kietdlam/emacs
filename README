@@ -1,0 +1,15 @@
+Working Emacs version (27.0.50), commit 068cbed
+
+Installation on Mac OS:
+
+- brew tap d12frosted/emacs-plus
+- brew install emacs-plus; brew uninstall emacs-plus   # To get the dependencies
+- brew install imagemagick@7
+- git clone <this_repo> to ~/emacs
+- cd ~/emacs
+- git apply no-titlebar-head.patch
+- ./autogen.sh
+- ./configure --with-imagemagick --with-ns --disable-ns-self-contained --with-xml2 --with-modules --with-jpeg --with-png --with-gif --with-tiff
+- export C_INCLUDE_PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/libxml2/ && make
+- sudo make install
+- Drag ~/emacs/nextstep/Emacs.app   to Dock
